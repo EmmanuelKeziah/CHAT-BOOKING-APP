@@ -12,12 +12,11 @@ body, html{
 
 .mainContainer{
     display: flex;
-    justify-content: center;
     background-color: rgba(250,250,250,255);
     min-height: 100vh;
     width: 100%;
     position: relative;
-    gap: 60px;
+    gap: 0px;
     overflow: hidden;
 }
 
@@ -32,15 +31,36 @@ body, html{
 .sideBar{
     width: 500px;
     height: 90vh;
-    background-color: rgba(189,64,254,255);
+    background: linear-gradient(180deg, rgb(209, 140, 175), rgba(128,0,255,255));
     padding: 0;
     border-bottom-left-radius: 500px;
     border-bottom-right-radius: 500px;
     position: relative;
+    left: -100px;
+}
+
+.inverted-sideBar{
+    width: 500px;
+    height: 90vh;
+    padding: 0;
+    border-top-right-radius: 500px;
+    border-top-left-radius: 500px;
+    background-color: rgba(0, 0, 0, 0.04);
+    position: absolute;
+    right: -100px;
+    bottom: -50px;
+    z-index: 0;
 }
 
 .rightSide{
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    min-width: 50%;
+    position: relative;
+    
 }
 
 
@@ -50,7 +70,7 @@ body, html{
     left: 50%;
     top: 50%;
     width: 20rem;
-    height: 70vh;
+    height: 72vh;
     transform: translate(-50%, -50%);
     background-color: #F5F3F8;
     border-radius: 25px;
@@ -60,7 +80,7 @@ body, html{
 
 .header{
     display: flex;
-    background-color: rgba(189,64,254,255);
+    background: linear-gradient(to left, rgba(189,64,254,255), rgba(128,0,255,255));
     color: white;
     padding: 20px;
     border-top-left-radius: 25px;
@@ -87,6 +107,7 @@ body, html{
         font-weight: 400;
         
     }
+    
 }
 
 .chatBody{
@@ -105,7 +126,7 @@ body, html{
     align-items: flex-end;
 
     p{
-    color: #D8D3DC;
+    color: rgba(0, 0, 0, 0.50);
     justify-content: flex-end;
     }
 }
@@ -155,12 +176,17 @@ body, html{
 }
 
 .radio-1{
-    background-color: rgba(178,63,255,255);
-    width: 60%;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to left, rgba(189,64,254,255), rgba(128,0,255,255));
+    width: 80%;
     height: 50px;
+    padding: 5px;
+    margin-bottom: 5px;
     border-radius: 10px;
 }
 .radio-1 input[type="radio"] {
+    display: flex;
     margin-right: 10px;
 }
 
@@ -168,6 +194,8 @@ body, html{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.50);
     h2{
         color: rgba(65,43,85,255);
         font-size: 30px;
